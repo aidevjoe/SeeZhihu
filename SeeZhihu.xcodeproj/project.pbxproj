@@ -1,0 +1,728 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D56707CE07A4915C7B6F607 /* libPods-SeeZhihu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CC5777C71C6006142718E92 /* libPods-SeeZhihu.a */; };
+		D8F4B5B11D8917BF006D4A2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5B01D8917BF006D4A2E /* main.m */; };
+		D8F4B5B41D8917BF006D4A2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5B31D8917BF006D4A2E /* AppDelegate.m */; };
+		D8F4B5C71D891800006D4A2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F4B5C61D891800006D4A2E /* Assets.xcassets */; };
+		D8F4B6291D89186C006D4A2E /* NSString+LabelWidthAndHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5CD1D89186C006D4A2E /* NSString+LabelWidthAndHeight.m */; };
+		D8F4B62A1D89186C006D4A2E /* UIImage+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5CF1D89186C006D4A2E /* UIImage+extension.m */; };
+		D8F4B62B1D89186C006D4A2E /* UIImageView+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5D11D89186C006D4A2E /* UIImageView+WebImage.m */; };
+		D8F4B62C1D89186C006D4A2E /* UIView+Extend.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5D31D89186C006D4A2E /* UIView+Extend.m */; };
+		D8F4B62D1D89186C006D4A2E /* QCChoicenessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5D71D89186C006D4A2E /* QCChoicenessViewController.m */; };
+		D8F4B62E1D89186C006D4A2E /* QCQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5D91D89186C006D4A2E /* QCQuestionViewController.m */; };
+		D8F4B62F1D89186C006D4A2E /* QCPosts.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5DC1D89186C006D4A2E /* QCPosts.m */; };
+		D8F4B6301D89186C006D4A2E /* QCQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5DE1D89186C006D4A2E /* QCQuestion.m */; };
+		D8F4B6311D89186C006D4A2E /* QCPostsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5E11D89186C006D4A2E /* QCPostsCell.m */; };
+		D8F4B6321D89186C006D4A2E /* QCQuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5E31D89186C006D4A2E /* QCQuestionCell.m */; };
+		D8F4B6331D89186C006D4A2E /* QCRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5E51D89186C006D4A2E /* QCRefreshView.m */; };
+		D8F4B6341D89186C006D4A2E /* QCFollowerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5E91D89186C006D4A2E /* QCFollowerViewController.m */; };
+		D8F4B6351D89186C006D4A2E /* QCLargeVViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5EB1D89186C006D4A2E /* QCLargeVViewController.m */; };
+		D8F4B6361D89186C006D4A2E /* QCRankBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5ED1D89186C006D4A2E /* QCRankBaseViewController.m */; };
+		D8F4B6371D89186C006D4A2E /* QCSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5EF1D89186C006D4A2E /* QCSearchViewController.m */; };
+		D8F4B6381D89186C006D4A2E /* QCUserInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5F11D89186C006D4A2E /* QCUserInfoViewController.m */; };
+		D8F4B6391D89186C006D4A2E /* QCVoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5F31D89186C006D4A2E /* QCVoteViewController.m */; };
+		D8F4B63A1D89186C006D4A2E /* QCDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5F61D89186C006D4A2E /* QCDetail.m */; };
+		D8F4B63B1D89186C006D4A2E /* QCRank.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5F81D89186C006D4A2E /* QCRank.m */; };
+		D8F4B63C1D89186C006D4A2E /* QCStar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5FA1D89186C006D4A2E /* QCStar.m */; };
+		D8F4B63D1D89186C006D4A2E /* QCTopanswers.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5FC1D89186C006D4A2E /* QCTopanswers.m */; };
+		D8F4B63E1D89186C006D4A2E /* QCTrend.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5FE1D89186C006D4A2E /* QCTrend.m */; };
+		D8F4B63F1D89186C006D4A2E /* QCUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B6001D89186C006D4A2E /* QCUserInfo.m */; };
+		D8F4B6401D89186C006D4A2E /* QCAnswerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B6031D89186C006D4A2E /* QCAnswerCell.m */; };
+		D8F4B6411D89186C006D4A2E /* QCRankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B6051D89186C006D4A2E /* QCRankCell.m */; };
+		D8F4B6421D89186C006D4A2E /* QCSearchUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B6071D89186C006D4A2E /* QCSearchUserCell.m */; };
+		D8F4B6431D89186C006D4A2E /* QCSliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B6091D89186C006D4A2E /* QCSliderView.m */; };
+		D8F4B6441D89186C006D4A2E /* QCUserInfoHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B60B1D89186C006D4A2E /* QCUserInfoHeaderView.m */; };
+		D8F4B6451D89186C006D4A2E /* QCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B60F1D89186C006D4A2E /* QCNavigationController.m */; };
+		D8F4B6461D89186C006D4A2E /* QCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B6111D89186C006D4A2E /* QCTabBarController.m */; };
+		D8F4B6471D89186C006D4A2E /* QCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B6131D89186C006D4A2E /* QCViewController.m */; };
+		D8F4B6481D89186C006D4A2E /* QCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B6151D89186C006D4A2E /* QCWebViewController.m */; };
+		D8F4B6491D89186C006D4A2E /* QCCellDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B6181D89186C006D4A2E /* QCCellDataAdapter.m */; };
+		D8F4B64A1D89186C006D4A2E /* UITableView+CellClass.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B61A1D89186C006D4A2E /* UITableView+CellClass.m */; };
+		D8F4B64B1D89186C006D4A2E /* QCCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B61D1D89186C006D4A2E /* QCCustomCell.m */; };
+		D8F4B64C1D89186C006D4A2E /* QCNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B6201D89186C006D4A2E /* QCNetworking.m */; };
+		D8F4B64D1D89186C006D4A2E /* Log.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B6221D89186C006D4A2E /* Log.m */; };
+		D8F4B64E1D89186C006D4A2E /* QCTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B6241D89186C006D4A2E /* QCTools.m */; };
+		D8F4B64F1D89186C006D4A2E /* CircleProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B6281D89186C006D4A2E /* CircleProgressBar.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		238F29C01B201D69736BF031 /* Pods-SeeZhihu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeZhihu.release.xcconfig"; path = "Pods/Target Support Files/Pods-SeeZhihu/Pods-SeeZhihu.release.xcconfig"; sourceTree = "<group>"; };
+		7B431A9AFCCCE40A5948C2E2 /* Pods-SeeZhihu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeZhihu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SeeZhihu/Pods-SeeZhihu.debug.xcconfig"; sourceTree = "<group>"; };
+		7CC5777C71C6006142718E92 /* libPods-SeeZhihu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SeeZhihu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8F4B5AC1D8917BE006D4A2E /* SeeZhihu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeZhihu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8F4B5B01D8917BF006D4A2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D8F4B5B21D8917BF006D4A2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D8F4B5B31D8917BF006D4A2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D8F4B5C01D8917BF006D4A2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8F4B5C61D891800006D4A2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8F4B5CC1D89186C006D4A2E /* NSString+LabelWidthAndHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LabelWidthAndHeight.h"; sourceTree = "<group>"; };
+		D8F4B5CD1D89186C006D4A2E /* NSString+LabelWidthAndHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LabelWidthAndHeight.m"; sourceTree = "<group>"; };
+		D8F4B5CE1D89186C006D4A2E /* UIImage+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+extension.h"; sourceTree = "<group>"; };
+		D8F4B5CF1D89186C006D4A2E /* UIImage+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+extension.m"; sourceTree = "<group>"; };
+		D8F4B5D01D89186C006D4A2E /* UIImageView+WebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebImage.h"; sourceTree = "<group>"; };
+		D8F4B5D11D89186C006D4A2E /* UIImageView+WebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebImage.m"; sourceTree = "<group>"; };
+		D8F4B5D21D89186C006D4A2E /* UIView+Extend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extend.h"; sourceTree = "<group>"; };
+		D8F4B5D31D89186C006D4A2E /* UIView+Extend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extend.m"; sourceTree = "<group>"; };
+		D8F4B5D61D89186C006D4A2E /* QCChoicenessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCChoicenessViewController.h; sourceTree = "<group>"; };
+		D8F4B5D71D89186C006D4A2E /* QCChoicenessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCChoicenessViewController.m; sourceTree = "<group>"; };
+		D8F4B5D81D89186C006D4A2E /* QCQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCQuestionViewController.h; sourceTree = "<group>"; };
+		D8F4B5D91D89186C006D4A2E /* QCQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCQuestionViewController.m; sourceTree = "<group>"; };
+		D8F4B5DB1D89186C006D4A2E /* QCPosts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCPosts.h; sourceTree = "<group>"; };
+		D8F4B5DC1D89186C006D4A2E /* QCPosts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCPosts.m; sourceTree = "<group>"; };
+		D8F4B5DD1D89186C006D4A2E /* QCQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCQuestion.h; sourceTree = "<group>"; };
+		D8F4B5DE1D89186C006D4A2E /* QCQuestion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCQuestion.m; sourceTree = "<group>"; };
+		D8F4B5E01D89186C006D4A2E /* QCPostsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCPostsCell.h; sourceTree = "<group>"; };
+		D8F4B5E11D89186C006D4A2E /* QCPostsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCPostsCell.m; sourceTree = "<group>"; };
+		D8F4B5E21D89186C006D4A2E /* QCQuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCQuestionCell.h; sourceTree = "<group>"; };
+		D8F4B5E31D89186C006D4A2E /* QCQuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCQuestionCell.m; sourceTree = "<group>"; };
+		D8F4B5E41D89186C006D4A2E /* QCRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCRefreshView.h; sourceTree = "<group>"; };
+		D8F4B5E51D89186C006D4A2E /* QCRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCRefreshView.m; sourceTree = "<group>"; };
+		D8F4B5E81D89186C006D4A2E /* QCFollowerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCFollowerViewController.h; sourceTree = "<group>"; };
+		D8F4B5E91D89186C006D4A2E /* QCFollowerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCFollowerViewController.m; sourceTree = "<group>"; };
+		D8F4B5EA1D89186C006D4A2E /* QCLargeVViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCLargeVViewController.h; sourceTree = "<group>"; };
+		D8F4B5EB1D89186C006D4A2E /* QCLargeVViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCLargeVViewController.m; sourceTree = "<group>"; };
+		D8F4B5EC1D89186C006D4A2E /* QCRankBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCRankBaseViewController.h; sourceTree = "<group>"; };
+		D8F4B5ED1D89186C006D4A2E /* QCRankBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCRankBaseViewController.m; sourceTree = "<group>"; };
+		D8F4B5EE1D89186C006D4A2E /* QCSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCSearchViewController.h; sourceTree = "<group>"; };
+		D8F4B5EF1D89186C006D4A2E /* QCSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCSearchViewController.m; sourceTree = "<group>"; };
+		D8F4B5F01D89186C006D4A2E /* QCUserInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCUserInfoViewController.h; sourceTree = "<group>"; };
+		D8F4B5F11D89186C006D4A2E /* QCUserInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCUserInfoViewController.m; sourceTree = "<group>"; };
+		D8F4B5F21D89186C006D4A2E /* QCVoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCVoteViewController.h; sourceTree = "<group>"; };
+		D8F4B5F31D89186C006D4A2E /* QCVoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCVoteViewController.m; sourceTree = "<group>"; };
+		D8F4B5F51D89186C006D4A2E /* QCDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCDetail.h; sourceTree = "<group>"; };
+		D8F4B5F61D89186C006D4A2E /* QCDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCDetail.m; sourceTree = "<group>"; };
+		D8F4B5F71D89186C006D4A2E /* QCRank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCRank.h; sourceTree = "<group>"; };
+		D8F4B5F81D89186C006D4A2E /* QCRank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCRank.m; sourceTree = "<group>"; };
+		D8F4B5F91D89186C006D4A2E /* QCStar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCStar.h; sourceTree = "<group>"; };
+		D8F4B5FA1D89186C006D4A2E /* QCStar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCStar.m; sourceTree = "<group>"; };
+		D8F4B5FB1D89186C006D4A2E /* QCTopanswers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCTopanswers.h; sourceTree = "<group>"; };
+		D8F4B5FC1D89186C006D4A2E /* QCTopanswers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCTopanswers.m; sourceTree = "<group>"; };
+		D8F4B5FD1D89186C006D4A2E /* QCTrend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCTrend.h; sourceTree = "<group>"; };
+		D8F4B5FE1D89186C006D4A2E /* QCTrend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCTrend.m; sourceTree = "<group>"; };
+		D8F4B5FF1D89186C006D4A2E /* QCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCUserInfo.h; sourceTree = "<group>"; };
+		D8F4B6001D89186C006D4A2E /* QCUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCUserInfo.m; sourceTree = "<group>"; };
+		D8F4B6021D89186C006D4A2E /* QCAnswerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCAnswerCell.h; sourceTree = "<group>"; };
+		D8F4B6031D89186C006D4A2E /* QCAnswerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCAnswerCell.m; sourceTree = "<group>"; };
+		D8F4B6041D89186C006D4A2E /* QCRankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCRankCell.h; sourceTree = "<group>"; };
+		D8F4B6051D89186C006D4A2E /* QCRankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCRankCell.m; sourceTree = "<group>"; };
+		D8F4B6061D89186C006D4A2E /* QCSearchUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCSearchUserCell.h; sourceTree = "<group>"; };
+		D8F4B6071D89186C006D4A2E /* QCSearchUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCSearchUserCell.m; sourceTree = "<group>"; };
+		D8F4B6081D89186C006D4A2E /* QCSliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCSliderView.h; sourceTree = "<group>"; };
+		D8F4B6091D89186C006D4A2E /* QCSliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCSliderView.m; sourceTree = "<group>"; };
+		D8F4B60A1D89186C006D4A2E /* QCUserInfoHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCUserInfoHeaderView.h; sourceTree = "<group>"; };
+		D8F4B60B1D89186C006D4A2E /* QCUserInfoHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCUserInfoHeaderView.m; sourceTree = "<group>"; };
+		D8F4B60E1D89186C006D4A2E /* QCNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCNavigationController.h; sourceTree = "<group>"; };
+		D8F4B60F1D89186C006D4A2E /* QCNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCNavigationController.m; sourceTree = "<group>"; };
+		D8F4B6101D89186C006D4A2E /* QCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCTabBarController.h; sourceTree = "<group>"; };
+		D8F4B6111D89186C006D4A2E /* QCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCTabBarController.m; sourceTree = "<group>"; };
+		D8F4B6121D89186C006D4A2E /* QCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCViewController.h; sourceTree = "<group>"; };
+		D8F4B6131D89186C006D4A2E /* QCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCViewController.m; sourceTree = "<group>"; };
+		D8F4B6141D89186C006D4A2E /* QCWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCWebViewController.h; sourceTree = "<group>"; };
+		D8F4B6151D89186C006D4A2E /* QCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCWebViewController.m; sourceTree = "<group>"; };
+		D8F4B6171D89186C006D4A2E /* QCCellDataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCCellDataAdapter.h; sourceTree = "<group>"; };
+		D8F4B6181D89186C006D4A2E /* QCCellDataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCCellDataAdapter.m; sourceTree = "<group>"; };
+		D8F4B6191D89186C006D4A2E /* UITableView+CellClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+CellClass.h"; sourceTree = "<group>"; };
+		D8F4B61A1D89186C006D4A2E /* UITableView+CellClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+CellClass.m"; sourceTree = "<group>"; };
+		D8F4B61C1D89186C006D4A2E /* QCCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCCustomCell.h; sourceTree = "<group>"; };
+		D8F4B61D1D89186C006D4A2E /* QCCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCCustomCell.m; sourceTree = "<group>"; };
+		D8F4B61F1D89186C006D4A2E /* QCNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCNetworking.h; sourceTree = "<group>"; };
+		D8F4B6201D89186C006D4A2E /* QCNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCNetworking.m; sourceTree = "<group>"; };
+		D8F4B6221D89186C006D4A2E /* Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Log.m; sourceTree = "<group>"; };
+		D8F4B6231D89186C006D4A2E /* QCTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCTools.h; sourceTree = "<group>"; };
+		D8F4B6241D89186C006D4A2E /* QCTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCTools.m; sourceTree = "<group>"; };
+		D8F4B6251D89186C006D4A2E /* QCUtilsMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCUtilsMacro.h; sourceTree = "<group>"; };
+		D8F4B6271D89186C006D4A2E /* CircleProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressBar.h; sourceTree = "<group>"; };
+		D8F4B6281D89186C006D4A2E /* CircleProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressBar.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8F4B5A91D8917BE006D4A2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D56707CE07A4915C7B6F607 /* libPods-SeeZhihu.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55567F3312CD5C04DC5A96B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B431A9AFCCCE40A5948C2E2 /* Pods-SeeZhihu.debug.xcconfig */,
+				238F29C01B201D69736BF031 /* Pods-SeeZhihu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D8F4B5A31D8917BE006D4A2E = {
+			isa = PBXGroup;
+			children = (
+				D8F4B5AE1D8917BF006D4A2E /* SeeZhihu */,
+				D8F4B5AD1D8917BE006D4A2E /* Products */,
+				55567F3312CD5C04DC5A96B0 /* Pods */,
+				E47640660386A682E060E720 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D8F4B5AD1D8917BE006D4A2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B5AC1D8917BE006D4A2E /* SeeZhihu.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8F4B5AE1D8917BF006D4A2E /* SeeZhihu */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B5CA1D89186C006D4A2E /* Classes */,
+				D8F4B5B21D8917BF006D4A2E /* AppDelegate.h */,
+				D8F4B5B31D8917BF006D4A2E /* AppDelegate.m */,
+				D8F4B5C61D891800006D4A2E /* Assets.xcassets */,
+				D8F4B5C01D8917BF006D4A2E /* Info.plist */,
+				D8F4B5AF1D8917BF006D4A2E /* Supporting Files */,
+			);
+			path = SeeZhihu;
+			sourceTree = "<group>";
+		};
+		D8F4B5AF1D8917BF006D4A2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B5B01D8917BF006D4A2E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8F4B5CA1D89186C006D4A2E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B60C1D89186C006D4A2E /* Main */,
+				D8F4B5D41D89186C006D4A2E /* Choiceness */,
+				D8F4B5E61D89186C006D4A2E /* LargeV */,
+				D8F4B5CB1D89186C006D4A2E /* Category */,
+				D8F4B61E1D89186C006D4A2E /* Network */,
+				D8F4B6211D89186C006D4A2E /* Other */,
+				D8F4B6261D89186C006D4A2E /* Vender */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D8F4B5CB1D89186C006D4A2E /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B5CC1D89186C006D4A2E /* NSString+LabelWidthAndHeight.h */,
+				D8F4B5CD1D89186C006D4A2E /* NSString+LabelWidthAndHeight.m */,
+				D8F4B5CE1D89186C006D4A2E /* UIImage+extension.h */,
+				D8F4B5CF1D89186C006D4A2E /* UIImage+extension.m */,
+				D8F4B5D01D89186C006D4A2E /* UIImageView+WebImage.h */,
+				D8F4B5D11D89186C006D4A2E /* UIImageView+WebImage.m */,
+				D8F4B5D21D89186C006D4A2E /* UIView+Extend.h */,
+				D8F4B5D31D89186C006D4A2E /* UIView+Extend.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D8F4B5D41D89186C006D4A2E /* Choiceness */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B5D51D89186C006D4A2E /* Controller */,
+				D8F4B5DA1D89186C006D4A2E /* Model */,
+				D8F4B5DF1D89186C006D4A2E /* View */,
+			);
+			path = Choiceness;
+			sourceTree = "<group>";
+		};
+		D8F4B5D51D89186C006D4A2E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B5D61D89186C006D4A2E /* QCChoicenessViewController.h */,
+				D8F4B5D71D89186C006D4A2E /* QCChoicenessViewController.m */,
+				D8F4B5D81D89186C006D4A2E /* QCQuestionViewController.h */,
+				D8F4B5D91D89186C006D4A2E /* QCQuestionViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8F4B5DA1D89186C006D4A2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B5DB1D89186C006D4A2E /* QCPosts.h */,
+				D8F4B5DC1D89186C006D4A2E /* QCPosts.m */,
+				D8F4B5DD1D89186C006D4A2E /* QCQuestion.h */,
+				D8F4B5DE1D89186C006D4A2E /* QCQuestion.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8F4B5DF1D89186C006D4A2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B5E01D89186C006D4A2E /* QCPostsCell.h */,
+				D8F4B5E11D89186C006D4A2E /* QCPostsCell.m */,
+				D8F4B5E21D89186C006D4A2E /* QCQuestionCell.h */,
+				D8F4B5E31D89186C006D4A2E /* QCQuestionCell.m */,
+				D8F4B5E41D89186C006D4A2E /* QCRefreshView.h */,
+				D8F4B5E51D89186C006D4A2E /* QCRefreshView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8F4B5E61D89186C006D4A2E /* LargeV */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B5E71D89186C006D4A2E /* Controller */,
+				D8F4B5F41D89186C006D4A2E /* Model */,
+				D8F4B6011D89186C006D4A2E /* View */,
+			);
+			path = LargeV;
+			sourceTree = "<group>";
+		};
+		D8F4B5E71D89186C006D4A2E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B5E81D89186C006D4A2E /* QCFollowerViewController.h */,
+				D8F4B5E91D89186C006D4A2E /* QCFollowerViewController.m */,
+				D8F4B5EA1D89186C006D4A2E /* QCLargeVViewController.h */,
+				D8F4B5EB1D89186C006D4A2E /* QCLargeVViewController.m */,
+				D8F4B5EC1D89186C006D4A2E /* QCRankBaseViewController.h */,
+				D8F4B5ED1D89186C006D4A2E /* QCRankBaseViewController.m */,
+				D8F4B5EE1D89186C006D4A2E /* QCSearchViewController.h */,
+				D8F4B5EF1D89186C006D4A2E /* QCSearchViewController.m */,
+				D8F4B5F01D89186C006D4A2E /* QCUserInfoViewController.h */,
+				D8F4B5F11D89186C006D4A2E /* QCUserInfoViewController.m */,
+				D8F4B5F21D89186C006D4A2E /* QCVoteViewController.h */,
+				D8F4B5F31D89186C006D4A2E /* QCVoteViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8F4B5F41D89186C006D4A2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B5F51D89186C006D4A2E /* QCDetail.h */,
+				D8F4B5F61D89186C006D4A2E /* QCDetail.m */,
+				D8F4B5F71D89186C006D4A2E /* QCRank.h */,
+				D8F4B5F81D89186C006D4A2E /* QCRank.m */,
+				D8F4B5F91D89186C006D4A2E /* QCStar.h */,
+				D8F4B5FA1D89186C006D4A2E /* QCStar.m */,
+				D8F4B5FB1D89186C006D4A2E /* QCTopanswers.h */,
+				D8F4B5FC1D89186C006D4A2E /* QCTopanswers.m */,
+				D8F4B5FD1D89186C006D4A2E /* QCTrend.h */,
+				D8F4B5FE1D89186C006D4A2E /* QCTrend.m */,
+				D8F4B5FF1D89186C006D4A2E /* QCUserInfo.h */,
+				D8F4B6001D89186C006D4A2E /* QCUserInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D8F4B6011D89186C006D4A2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B6021D89186C006D4A2E /* QCAnswerCell.h */,
+				D8F4B6031D89186C006D4A2E /* QCAnswerCell.m */,
+				D8F4B6041D89186C006D4A2E /* QCRankCell.h */,
+				D8F4B6051D89186C006D4A2E /* QCRankCell.m */,
+				D8F4B6061D89186C006D4A2E /* QCSearchUserCell.h */,
+				D8F4B6071D89186C006D4A2E /* QCSearchUserCell.m */,
+				D8F4B6081D89186C006D4A2E /* QCSliderView.h */,
+				D8F4B6091D89186C006D4A2E /* QCSliderView.m */,
+				D8F4B60A1D89186C006D4A2E /* QCUserInfoHeaderView.h */,
+				D8F4B60B1D89186C006D4A2E /* QCUserInfoHeaderView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8F4B60C1D89186C006D4A2E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B60D1D89186C006D4A2E /* Controllers */,
+				D8F4B6161D89186C006D4A2E /* Others */,
+				D8F4B61B1D89186C006D4A2E /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D8F4B60D1D89186C006D4A2E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B60E1D89186C006D4A2E /* QCNavigationController.h */,
+				D8F4B60F1D89186C006D4A2E /* QCNavigationController.m */,
+				D8F4B6101D89186C006D4A2E /* QCTabBarController.h */,
+				D8F4B6111D89186C006D4A2E /* QCTabBarController.m */,
+				D8F4B6121D89186C006D4A2E /* QCViewController.h */,
+				D8F4B6131D89186C006D4A2E /* QCViewController.m */,
+				D8F4B6141D89186C006D4A2E /* QCWebViewController.h */,
+				D8F4B6151D89186C006D4A2E /* QCWebViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D8F4B6161D89186C006D4A2E /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B6171D89186C006D4A2E /* QCCellDataAdapter.h */,
+				D8F4B6181D89186C006D4A2E /* QCCellDataAdapter.m */,
+				D8F4B6191D89186C006D4A2E /* UITableView+CellClass.h */,
+				D8F4B61A1D89186C006D4A2E /* UITableView+CellClass.m */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		D8F4B61B1D89186C006D4A2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B61C1D89186C006D4A2E /* QCCustomCell.h */,
+				D8F4B61D1D89186C006D4A2E /* QCCustomCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D8F4B61E1D89186C006D4A2E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B61F1D89186C006D4A2E /* QCNetworking.h */,
+				D8F4B6201D89186C006D4A2E /* QCNetworking.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D8F4B6211D89186C006D4A2E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B6221D89186C006D4A2E /* Log.m */,
+				D8F4B6231D89186C006D4A2E /* QCTools.h */,
+				D8F4B6241D89186C006D4A2E /* QCTools.m */,
+				D8F4B6251D89186C006D4A2E /* QCUtilsMacro.h */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		D8F4B6261D89186C006D4A2E /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				D8F4B6271D89186C006D4A2E /* CircleProgressBar.h */,
+				D8F4B6281D89186C006D4A2E /* CircleProgressBar.m */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		E47640660386A682E060E720 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CC5777C71C6006142718E92 /* libPods-SeeZhihu.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8F4B5AB1D8917BE006D4A2E /* SeeZhihu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8F4B5C31D8917BF006D4A2E /* Build configuration list for PBXNativeTarget "SeeZhihu" */;
+			buildPhases = (
+				29C83DCB67347514E9521211 /* Check Pods Manifest.lock */,
+				D8F4B5A81D8917BE006D4A2E /* Sources */,
+				D8F4B5A91D8917BE006D4A2E /* Frameworks */,
+				D8F4B5AA1D8917BE006D4A2E /* Resources */,
+				E1A0EEB631CBF91E9526F751 /* Embed Pods Frameworks */,
+				620019AB65274B634085CEBA /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SeeZhihu;
+			productName = SeeZhihu;
+			productReference = D8F4B5AC1D8917BE006D4A2E /* SeeZhihu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8F4B5A41D8917BE006D4A2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Joe;
+				TargetAttributes = {
+					D8F4B5AB1D8917BE006D4A2E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = D8F4B5A71D8917BE006D4A2E /* Build configuration list for PBXProject "SeeZhihu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8F4B5A31D8917BE006D4A2E;
+			productRefGroup = D8F4B5AD1D8917BE006D4A2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8F4B5AB1D8917BE006D4A2E /* SeeZhihu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8F4B5AA1D8917BE006D4A2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8F4B5C71D891800006D4A2E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29C83DCB67347514E9521211 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		620019AB65274B634085CEBA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SeeZhihu/Pods-SeeZhihu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1A0EEB631CBF91E9526F751 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SeeZhihu/Pods-SeeZhihu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8F4B5A81D8917BE006D4A2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8F4B6291D89186C006D4A2E /* NSString+LabelWidthAndHeight.m in Sources */,
+				D8F4B63C1D89186C006D4A2E /* QCStar.m in Sources */,
+				D8F4B63B1D89186C006D4A2E /* QCRank.m in Sources */,
+				D8F4B6421D89186C006D4A2E /* QCSearchUserCell.m in Sources */,
+				D8F4B6491D89186C006D4A2E /* QCCellDataAdapter.m in Sources */,
+				D8F4B6401D89186C006D4A2E /* QCAnswerCell.m in Sources */,
+				D8F4B64A1D89186C006D4A2E /* UITableView+CellClass.m in Sources */,
+				D8F4B6381D89186C006D4A2E /* QCUserInfoViewController.m in Sources */,
+				D8F4B6301D89186C006D4A2E /* QCQuestion.m in Sources */,
+				D8F4B5B41D8917BF006D4A2E /* AppDelegate.m in Sources */,
+				D8F4B6431D89186C006D4A2E /* QCSliderView.m in Sources */,
+				D8F4B62C1D89186C006D4A2E /* UIView+Extend.m in Sources */,
+				D8F4B6321D89186C006D4A2E /* QCQuestionCell.m in Sources */,
+				D8F4B64B1D89186C006D4A2E /* QCCustomCell.m in Sources */,
+				D8F4B6371D89186C006D4A2E /* QCSearchViewController.m in Sources */,
+				D8F4B62B1D89186C006D4A2E /* UIImageView+WebImage.m in Sources */,
+				D8F4B64C1D89186C006D4A2E /* QCNetworking.m in Sources */,
+				D8F4B6351D89186C006D4A2E /* QCLargeVViewController.m in Sources */,
+				D8F4B6361D89186C006D4A2E /* QCRankBaseViewController.m in Sources */,
+				D8F4B64F1D89186C006D4A2E /* CircleProgressBar.m in Sources */,
+				D8F4B63A1D89186C006D4A2E /* QCDetail.m in Sources */,
+				D8F4B6441D89186C006D4A2E /* QCUserInfoHeaderView.m in Sources */,
+				D8F4B6471D89186C006D4A2E /* QCViewController.m in Sources */,
+				D8F4B62E1D89186C006D4A2E /* QCQuestionViewController.m in Sources */,
+				D8F4B64E1D89186C006D4A2E /* QCTools.m in Sources */,
+				D8F4B6331D89186C006D4A2E /* QCRefreshView.m in Sources */,
+				D8F4B6341D89186C006D4A2E /* QCFollowerViewController.m in Sources */,
+				D8F4B64D1D89186C006D4A2E /* Log.m in Sources */,
+				D8F4B5B11D8917BF006D4A2E /* main.m in Sources */,
+				D8F4B63F1D89186C006D4A2E /* QCUserInfo.m in Sources */,
+				D8F4B63E1D89186C006D4A2E /* QCTrend.m in Sources */,
+				D8F4B6481D89186C006D4A2E /* QCWebViewController.m in Sources */,
+				D8F4B62D1D89186C006D4A2E /* QCChoicenessViewController.m in Sources */,
+				D8F4B63D1D89186C006D4A2E /* QCTopanswers.m in Sources */,
+				D8F4B6311D89186C006D4A2E /* QCPostsCell.m in Sources */,
+				D8F4B6451D89186C006D4A2E /* QCNavigationController.m in Sources */,
+				D8F4B62A1D89186C006D4A2E /* UIImage+extension.m in Sources */,
+				D8F4B6391D89186C006D4A2E /* QCVoteViewController.m in Sources */,
+				D8F4B62F1D89186C006D4A2E /* QCPosts.m in Sources */,
+				D8F4B6411D89186C006D4A2E /* QCRankCell.m in Sources */,
+				D8F4B6461D89186C006D4A2E /* QCTabBarController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D8F4B5C11D8917BF006D4A2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D8F4B5C21D8917BF006D4A2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8F4B5C41D8917BF006D4A2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B431A9AFCCCE40A5948C2E2 /* Pods-SeeZhihu.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = SeeZhihu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joe78.www.SeeZhihu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D8F4B5C51D8917BF006D4A2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 238F29C01B201D69736BF031 /* Pods-SeeZhihu.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = SeeZhihu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.joe78.www.SeeZhihu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8F4B5A71D8917BE006D4A2E /* Build configuration list for PBXProject "SeeZhihu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8F4B5C11D8917BF006D4A2E /* Debug */,
+				D8F4B5C21D8917BF006D4A2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8F4B5C31D8917BF006D4A2E /* Build configuration list for PBXNativeTarget "SeeZhihu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8F4B5C41D8917BF006D4A2E /* Debug */,
+				D8F4B5C51D8917BF006D4A2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D8F4B5A41D8917BE006D4A2E /* Project object */;
+}
