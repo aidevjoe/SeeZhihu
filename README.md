@@ -20,3 +20,9 @@
 ## App演示
 ![image](http://ww4.sinaimg.cn/large/801b780agw1f7t72kqjtsg20aa0ithdu.gif)
 
+
+## TODO
+
+目前对所有接口数据进行了缓存处理, 浏览过的页面在没有网络的情况可以访问
+
+下步将实现对web缓存
