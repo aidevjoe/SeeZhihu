@@ -13,6 +13,7 @@
 #import "UMSocialQQHandler.h"
 #import "UMSocialWechatHandler.h"
 #import "UMSocialSinaSSOHandler.h"
+#import "RNCachingURLProtocol.h"
 
 @interface AppDelegate ()
 
@@ -39,9 +40,9 @@
     [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"3921700954"
                                               secret:@"04b48b094faeb16683c32669824ebdad"
                                          RedirectURL:@"http://sns.whalecloud.com/sina2/callback"];
-    
-//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    
+
+    [NSURLProtocol registerClass:[RNCachingURLProtocol class]];
+
     return YES;
 }
 

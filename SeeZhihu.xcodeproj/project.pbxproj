@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D56707CE07A4915C7B6F607 /* libPods-SeeZhihu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CC5777C71C6006142718E92 /* libPods-SeeZhihu.a */; };
+		7722D4BC1D8A4ECD004CAF9A /* RNCachingURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 7722D4BB1D8A4ECD004CAF9A /* RNCachingURLProtocol.m */; };
 		D8F4B5B11D8917BF006D4A2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5B01D8917BF006D4A2E /* main.m */; };
 		D8F4B5B41D8917BF006D4A2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5B31D8917BF006D4A2E /* AppDelegate.m */; };
 		D8F4B5C71D891800006D4A2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F4B5C61D891800006D4A2E /* Assets.xcassets */; };
@@ -54,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		238F29C01B201D69736BF031 /* Pods-SeeZhihu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeZhihu.release.xcconfig"; path = "Pods/Target Support Files/Pods-SeeZhihu/Pods-SeeZhihu.release.xcconfig"; sourceTree = "<group>"; };
+		7722D4BA1D8A4ECD004CAF9A /* RNCachingURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCachingURLProtocol.h; sourceTree = "<group>"; };
+		7722D4BB1D8A4ECD004CAF9A /* RNCachingURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCachingURLProtocol.m; sourceTree = "<group>"; };
 		7B431A9AFCCCE40A5948C2E2 /* Pods-SeeZhihu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeZhihu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SeeZhihu/Pods-SeeZhihu.debug.xcconfig"; sourceTree = "<group>"; };
 		7CC5777C71C6006142718E92 /* libPods-SeeZhihu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SeeZhihu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F4B5AC1D8917BE006D4A2E /* SeeZhihu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeZhihu.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -389,6 +392,8 @@
 		D8F4B61E1D89186C006D4A2E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7722D4BA1D8A4ECD004CAF9A /* RNCachingURLProtocol.h */,
+				7722D4BB1D8A4ECD004CAF9A /* RNCachingURLProtocol.m */,
 				D8F4B61F1D89186C006D4A2E /* QCNetworking.h */,
 				D8F4B6201D89186C006D4A2E /* QCNetworking.m */,
 			);
@@ -457,6 +462,7 @@
 				TargetAttributes = {
 					D8F4B5AB1D8917BE006D4A2E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = T8CE5P8P3Y;
 					};
 				};
 			};
@@ -571,6 +577,7 @@
 				D8F4B6341D89186C006D4A2E /* QCFollowerViewController.m in Sources */,
 				D8F4B64D1D89186C006D4A2E /* Log.m in Sources */,
 				D8F4B5B11D8917BF006D4A2E /* main.m in Sources */,
+				7722D4BC1D8A4ECD004CAF9A /* RNCachingURLProtocol.m in Sources */,
 				D8F4B63F1D89186C006D4A2E /* QCUserInfo.m in Sources */,
 				D8F4B63E1D89186C006D4A2E /* QCTrend.m in Sources */,
 				D8F4B6481D89186C006D4A2E /* QCWebViewController.m in Sources */,
@@ -677,11 +684,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = T8CE5P8P3Y;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SeeZhihu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.joe78.www.SeeZhihu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joe78.www.SeeZhih;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -692,11 +700,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = T8CE5P8P3Y;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SeeZhihu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.joe78.www.SeeZhihu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joe78.www.SeeZhih;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
