@@ -21,8 +21,21 @@
 ![image](http://ww4.sinaimg.cn/large/801b780agw1f7t72kqjtsg20aa0ithdu.gif)
 
 
+## 更新
+
+- 1.0 完成软件基本功能
+
+- 1.1 对所有请求进行缓存处理  
+
+- 1.2 利用[RNCachingURLProtocol](https://github.com/rnapier/RNCachingURLProtocol)第三方库对UIWebView进行离线缓存
+
+
 ## TODO
 
-目前对所有接口数据进行了缓存处理, 浏览过的页面在没有网络的情况可以访问
+1. 对网页加载添加进度条
+2. 清除缓存
 
-下步将实现对web缓存
+
+## 最后
+如果你有任何问题或建议欢迎在这里[提问](https://github.com/Joe0708/SeeZhihu/issues/new)
+
