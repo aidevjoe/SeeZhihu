@@ -23,17 +23,18 @@
 
 ## 更新
 
-- 1.0 完成软件基本功能
+> 1.0 完成软件基本功能
 
-- 1.1 对所有请求进行缓存处理  
+> 1.1 对所有请求进行缓存处理  
 
-- 1.2 利用[RNCachingURLProtocol](https://github.com/rnapier/RNCachingURLProtocol)第三方库对UIWebView进行离线缓存
+> 1.2 利用[RNCachingURLProtocol](https://github.com/rnapier/RNCachingURLProtocol)第三方库对UIWebView进行离线缓存
 
 
 ## TODO
 
-1. 对网页加载添加进度条
-2. 清除缓存
+>1. <del>网页离线缓存</del>      
+>2. 对网页加载添加进度条  
+>3. 清除缓存
 
 
 ## 最后
