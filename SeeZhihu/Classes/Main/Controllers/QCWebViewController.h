@@ -7,11 +7,11 @@
 //
 
 #import "QCViewController.h"
+#import "RxWebViewController.h"
 
-@interface QCWebViewController : QCViewController
+@interface QCWebViewController : RxWebViewController
 
 + (QCWebViewController *)webViewWithUrl:(NSString *)url title:(NSString *)title;
 + (QCWebViewController *)webViewWithUrl:(NSString *)url;
 
-- (instancetype)initWithUrl:(NSString *)url title:(NSString *)title;
 @end

@@ -98,6 +98,7 @@ typedef void (^QCDownloadSuccessBlock)(NSURL *fileUrl);
  *   @param url           url
  *   @param params        请求的参数字典
  *   @param cache         是否缓存
+ *   @param refresh       是否刷新
  *   @param successBlock  成功的回调
  *   @param failureBlock  失败的回调
  *   @param showHUD       是否加载进度指示器
@@ -105,6 +106,26 @@ typedef void (^QCDownloadSuccessBlock)(NSURL *fileUrl);
 + (NSURLSessionTask *)getRequestWithUrl:(NSString *)url
                                  params:(NSDictionary *)params
                                   cache:(BOOL)isCache
+                                refresh:(BOOL)isRefresh
+                           successBlock:(QCSuccessBlock)successBlock
+                           failureBlock:(QCFailureBlock)failureBlock
+                                showHUD:(BOOL)showHUD;
+
+/**
+ *   GET请求 (防止 表格视图分页时 数据重复加载)
+ *
+ *   @param url           url
+ *   @param params        请求的参数字典
+ *   @param cache         是否缓存
+ *   @param reload        是否重新加载数据 (防止tableview分页数据重复加载)
+ *   @param successBlock  成功的回调
+ *   @param failureBlock  失败的回调
+ *   @param showHUD       是否加载进度指示器
+ */
++ (NSURLSessionTask *)getRequestWithUrl:(NSString *)url
+                                 params:(NSDictionary *)params
+                                  cache:(BOOL)isCache
+                                 reload:(BOOL)isReload
                            successBlock:(QCSuccessBlock)successBlock
                            failureBlock:(QCFailureBlock)failureBlock
                                 showHUD:(BOOL)showHUD;

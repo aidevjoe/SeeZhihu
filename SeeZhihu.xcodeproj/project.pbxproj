@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5D56707CE07A4915C7B6F607 /* libPods-SeeZhihu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CC5777C71C6006142718E92 /* libPods-SeeZhihu.a */; };
 		7722D4BC1D8A4ECD004CAF9A /* RNCachingURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 7722D4BB1D8A4ECD004CAF9A /* RNCachingURLProtocol.m */; };
+		D8B8DCEE1D8E41B8009D3C9F /* RxWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B8DCED1D8E41B8009D3C9F /* RxWebViewController.m */; };
+		D8B8DCF41D8E6E83009D3C9F /* QCProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B8DCF31D8E6E83009D3C9F /* QCProfileViewController.m */; };
 		D8F4B5B11D8917BF006D4A2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5B01D8917BF006D4A2E /* main.m */; };
 		D8F4B5B41D8917BF006D4A2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F4B5B31D8917BF006D4A2E /* AppDelegate.m */; };
 		D8F4B5C71D891800006D4A2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8F4B5C61D891800006D4A2E /* Assets.xcassets */; };
@@ -59,6 +61,10 @@
 		7722D4BB1D8A4ECD004CAF9A /* RNCachingURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCachingURLProtocol.m; sourceTree = "<group>"; };
 		7B431A9AFCCCE40A5948C2E2 /* Pods-SeeZhihu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeeZhihu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SeeZhihu/Pods-SeeZhihu.debug.xcconfig"; sourceTree = "<group>"; };
 		7CC5777C71C6006142718E92 /* libPods-SeeZhihu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SeeZhihu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8B8DCEC1D8E41B8009D3C9F /* RxWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RxWebViewController.h; sourceTree = "<group>"; };
+		D8B8DCED1D8E41B8009D3C9F /* RxWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RxWebViewController.m; sourceTree = "<group>"; };
+		D8B8DCF21D8E6E83009D3C9F /* QCProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCProfileViewController.h; sourceTree = "<group>"; };
+		D8B8DCF31D8E6E83009D3C9F /* QCProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCProfileViewController.m; sourceTree = "<group>"; };
 		D8F4B5AC1D8917BE006D4A2E /* SeeZhihu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeZhihu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8F4B5B01D8917BF006D4A2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D8F4B5B21D8917BF006D4A2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -166,6 +172,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D8B8DCEF1D8E6E73009D3C9F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D8B8DCF01D8E6E73009D3C9F /* Controller */,
+				D8B8DCF11D8E6E73009D3C9F /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D8B8DCF01D8E6E73009D3C9F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D8B8DCF21D8E6E83009D3C9F /* QCProfileViewController.h */,
+				D8B8DCF31D8E6E83009D3C9F /* QCProfileViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D8B8DCF11D8E6E73009D3C9F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		D8F4B5A31D8917BE006D4A2E = {
 			isa = PBXGroup;
 			children = (
@@ -211,6 +242,7 @@
 				D8F4B60C1D89186C006D4A2E /* Main */,
 				D8F4B5D41D89186C006D4A2E /* Choiceness */,
 				D8F4B5E61D89186C006D4A2E /* LargeV */,
+				D8B8DCEF1D8E6E73009D3C9F /* Profile */,
 				D8F4B5CB1D89186C006D4A2E /* Category */,
 				D8F4B61E1D89186C006D4A2E /* Network */,
 				D8F4B6211D89186C006D4A2E /* Other */,
@@ -363,6 +395,8 @@
 				D8F4B6111D89186C006D4A2E /* QCTabBarController.m */,
 				D8F4B6121D89186C006D4A2E /* QCViewController.h */,
 				D8F4B6131D89186C006D4A2E /* QCViewController.m */,
+				D8B8DCEC1D8E41B8009D3C9F /* RxWebViewController.h */,
+				D8B8DCED1D8E41B8009D3C9F /* RxWebViewController.m */,
 				D8F4B6141D89186C006D4A2E /* QCWebViewController.h */,
 				D8F4B6151D89186C006D4A2E /* QCWebViewController.m */,
 			);
@@ -561,6 +595,7 @@
 				D8F4B6431D89186C006D4A2E /* QCSliderView.m in Sources */,
 				D8F4B62C1D89186C006D4A2E /* UIView+Extend.m in Sources */,
 				D8F4B6321D89186C006D4A2E /* QCQuestionCell.m in Sources */,
+				D8B8DCEE1D8E41B8009D3C9F /* RxWebViewController.m in Sources */,
 				D8F4B64B1D89186C006D4A2E /* QCCustomCell.m in Sources */,
 				D8F4B6371D89186C006D4A2E /* QCSearchViewController.m in Sources */,
 				D8F4B62B1D89186C006D4A2E /* UIImageView+WebImage.m in Sources */,
@@ -587,6 +622,7 @@
 				D8F4B6451D89186C006D4A2E /* QCNavigationController.m in Sources */,
 				D8F4B62A1D89186C006D4A2E /* UIImage+extension.m in Sources */,
 				D8F4B6391D89186C006D4A2E /* QCVoteViewController.m in Sources */,
+				D8B8DCF41D8E6E83009D3C9F /* QCProfileViewController.m in Sources */,
 				D8F4B62F1D89186C006D4A2E /* QCPosts.m in Sources */,
 				D8F4B6411D89186C006D4A2E /* QCRankCell.m in Sources */,
 				D8F4B6461D89186C006D4A2E /* QCTabBarController.m in Sources */,

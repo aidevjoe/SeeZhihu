@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [QCNetworking getRequestWithUrl:@"http://api.kanzhihu.com/topuser/agree/1" params:nil cache:YES successBlock:^(id returnData, int code, NSString *msg) {
+    [QCNetworking getRequestWithUrl:@"http://api.kanzhihu.com/topuser/agree/1" params:nil cache:YES refresh:YES successBlock:^(id returnData, int code, NSString *msg) {
         NSMutableArray *voteArr = [NSMutableArray array];
         for (NSDictionary *vote in returnData[@"topuser"]) {
             [voteArr addObject:[QCRank yy_modelWithJSON:vote]];

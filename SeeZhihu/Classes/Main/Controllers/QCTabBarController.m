@@ -11,6 +11,7 @@
 #import "QCChoicenessViewController.h"
 #import "QCLargeVViewController.h"
 #import "QCUtilsMacro.h"
+#import "QCProfileViewController.h"
 
 @implementation QCTabBarController
 
@@ -24,6 +25,7 @@
  
     [self addChildViewController:[QCChoicenessViewController new] imageName:@"toolbar_choiceness" title:@"精选"];
     [self addChildViewController:[QCLargeVViewController new] imageName:@"toolbar_LargeV" title:@"大V"];
+    [self addChildViewController:[QCProfileViewController new] imageName:@"profile" title:@"我"];
 }
 
 

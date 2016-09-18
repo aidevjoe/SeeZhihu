@@ -18,13 +18,6 @@
  */
 + (NSString *)documentDirectory;
 
-/**
- @name 获取资源文件“RequesetAddress.plist”里面的值
- @param key 需要获取的值对应的键
- @return 该键对应的值
- */
-+ (id)addressInfoForKey:(NSString *)key;
-
 /*
  判断该知否存在或者为NULL
  */

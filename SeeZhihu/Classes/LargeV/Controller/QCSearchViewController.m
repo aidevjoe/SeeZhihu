@@ -86,7 +86,7 @@
 
 #pragma mark - UISearchBarDelegate
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
-    [QCNetworking getRequestWithUrl:[searchuser stringByAppendingString:searchBar.text] params:nil cache:YES successBlock:^(id returnData, int code, NSString *msg) {
+    [QCNetworking getRequestWithUrl:[searchuser stringByAppendingString:searchBar.text] params:nil cache:YES refresh:NO successBlock:^(id returnData, int code, NSString *msg) {
         NSMutableArray *searchResultArr = [NSMutableArray array];
         for (NSDictionary *user in returnData[@"users"]) {
             [searchResultArr addObject:[QCRank yy_modelWithJSON:user]];

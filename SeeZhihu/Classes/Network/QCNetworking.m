@@ -65,6 +65,7 @@ static AFHTTPSessionManager *_manager;
  *   @param url           url
  *   @param params        请求的参数字典
  *   @param cache         是否缓存
+ *   @param refresh       是否刷新
  *   @param successBlock  成功的回调
  *   @param failureBlock  失败的回调
  *   @param showHUD       是否加载进度指示器
@@ -72,6 +73,7 @@ static AFHTTPSessionManager *_manager;
 + (NSURLSessionTask *)getRequestWithUrl:(NSString *)url
                                  params:(NSDictionary *)params
                                   cache:(BOOL)isCache
+                                refresh:(BOOL)isRefresh
                            successBlock:(QCSuccessBlock)successBlock
                            failureBlock:(QCFailureBlock)failureBlock
                                 showHUD:(BOOL)showHUD{
@@ -92,9 +94,11 @@ static AFHTTPSessionManager *_manager;
                 msg                 = responseObject[@"rsMsg"];
             }
             successBlock ? successBlock(responseObject, code, msg) : 0;
+            if (!isRefresh) return session;
         }
         
     }
+    
     
     //没有网络直接返回
     if (networkStatus == QCNetworkStatusNotReachable) {
@@ -117,6 +121,84 @@ static AFHTTPSessionManager *_manager;
             msg                 = responseObject[@"rsMsg"];
         }
         successBlock ? successBlock(responseObject, code, msg) : 0;
+        
+        //缓存数据
+        isCache ? [QCNetworkCache cacheResponseObject:responseObject requestUrl:url params:params] : 0;
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [QCLoadingView hideLoadingView];
+        failureBlock ? failureBlock(error) : 0;
+    }];
+    
+    [session resume];
+    
+    return session;
+}
+
+
+/**
+ *   GET请求
+ *
+ *   @param url           url
+ *   @param params        请求的参数字典
+ *   @param cache         是否缓存
+ *   @param reload        是否重新加载数据
+ *   @param successBlock  成功的回调
+ *   @param failureBlock  失败的回调
+ *   @param showHUD       是否加载进度指示器
+ */
++ (NSURLSessionTask *)getRequestWithUrl:(NSString *)url
+                                 params:(NSDictionary *)params
+                                  cache:(BOOL)isCache
+                                 reload:(BOOL)isReload
+                           successBlock:(QCSuccessBlock)successBlock
+                           failureBlock:(QCFailureBlock)failureBlock
+                                showHUD:(BOOL)showHUD{
+    
+    __block NSURLSessionTask *session = nil;
+    
+    if (isCache) {
+        
+        id responseObject = [QCNetworkCache getCacheResponseObjectWithRequestUrl:url params:params];
+        
+        if (responseObject) {
+            
+            int code = 0;
+            NSString *msg = nil;
+            if (responseObject) {
+                //这个字段取决于 服务器
+                code                = [responseObject[@"rsCode"] intValue];
+                msg                 = responseObject[@"rsMsg"];
+            }
+            successBlock ? successBlock(responseObject, code, msg) : 0;
+        }else{
+            isReload = YES;
+        }
+    }
+    
+    
+    //没有网络直接返回
+    if (networkStatus == QCNetworkStatusNotReachable) {
+        [QCMessageAlertView showAlertWithMessage:QC_ERROR_IMFORMATION];
+        //        failureBlock ? failureBlock(QC_ERROR) : 0;
+        return session;
+    }
+    
+    if(showHUD) [QCLoadingView showLoadingView];
+    
+    session = [_manager GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [QCLoadingView hideLoadingView];
+        
+        int code = 0;
+        NSString *msg = nil;
+        
+        if (responseObject) {
+            //这个字段取决于 服务器
+            code                = [responseObject[@"rsCode"] intValue];
+            msg                 = responseObject[@"rsMsg"];
+        }
+        
+        if (isReload) successBlock ? successBlock(responseObject, code, msg) : 0;
         
         //缓存数据
         isCache ? [QCNetworkCache cacheResponseObject:responseObject requestUrl:url params:params] : 0;

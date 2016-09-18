@@ -36,8 +36,7 @@
         _tableView.showsHorizontalScrollIndicator = NO;
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.estimatedRowHeight = 280.0f;//推测高度，必须有，可以随便写多少
-        _tableView.rowHeight = UITableViewAutomaticDimension;//iOS8之后默认就是这个值，可以省略
+        _tableView.estimatedRowHeight = 280.0f;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.tableFooterView = [QCRefreshView refreshView];
         _tableView.tableFooterView.hidden = YES;
@@ -51,8 +50,9 @@
     if (!_postList) {
         _postList = [NSMutableArray array];
     }
-    
-    [_postList addObjectsFromArray:postList];
+    if (![_postList containsObject:postList]) {
+        [_postList addObjectsFromArray:postList];
+    }
 
     [self.tableView reloadData];
 }
@@ -73,7 +73,7 @@
 - (void)getPosts{
 
     NSString *url = self.postList.count ? [NSString stringWithFormat:@"%@/%li", getposts, [[self.postList lastObject] publishtime]] : getposts;
-    [QCNetworking getRequestWithUrl:url params:nil cache:YES successBlock:^(id returnData, int code, NSString *msg) {
+    [QCNetworking getRequestWithUrl:url params:nil cache:YES reload:NO successBlock:^(id returnData, int code, NSString *msg) {
         self.tableView.tableFooterView.hidden = YES;
         self.navigationItem.titleView = nil;
         

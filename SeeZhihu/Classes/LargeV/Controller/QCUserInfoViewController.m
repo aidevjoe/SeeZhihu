@@ -49,7 +49,7 @@
     
     self.tableView.backgroundColor = [UIColor colorWithWhite:0.966 alpha:1.000];
     
-    [QCNetworking getRequestWithUrl:[userdetail2 stringByAppendingString:self.userHashValue] params:nil cache:YES successBlock:^(id returnData, int code, NSString *msg) {
+    [QCNetworking getRequestWithUrl:[userdetail2 stringByAppendingString:self.userHashValue] params:nil cache:YES refresh:YES successBlock:^(id returnData, int code, NSString *msg) {
         self.userInfo = [QCUserInfo yy_modelWithDictionary:returnData];
         [self.tableView reloadData];
         self.tableView.tableHeaderView = [QCUserInfoHeaderView headerViewWithUserInfo:self.userInfo];

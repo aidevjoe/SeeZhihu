@@ -12,41 +12,26 @@
 #import "UMSocialSnsPlatformManager.h"
 #import "QCUtilsMacro.h"
 
-@interface QCWebViewController ()<UIWebViewDelegate, UMSocialUIDelegate>
-
-@property (nonatomic, strong) UIWebView *webView;
-@property (nonatomic, copy) NSString *url;
-
+@interface QCWebViewController ()<UMSocialUIDelegate>
 
 @end
 
 @implementation QCWebViewController
-
-- (UIWebView *)webView{
-    if (!_webView) {
-        _webView = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-//        _webView.delegate = self;
-        [self.view addSubview:_webView];
-    }
-    return _webView;
-}
-
-- (instancetype)initWithUrl:(NSString *)url title:(NSString *)title{
-    if (self = [super init]) {
-        [self.webView loadRequest:[[NSURLRequest alloc] initWithURL:[NSURL URLWithString:url]]];
-        self.title = title;
-        self.url = url;
-        [self setupNav];
-    }
-    return self;
-}
 
 + (QCWebViewController *)webViewWithUrl:(NSString *)url{
     return [self webViewWithUrl:url title:nil];
 }
 
 + (QCWebViewController *)webViewWithUrl:(NSString *)url title:(NSString *)title{
-    return [[self alloc] initWithUrl:url title:title];
+    return [[self alloc] initWithUrl:[NSURL URLWithString:url] title:title];
+}
+
+- (instancetype)initWithUrl:(NSURL *)url title:(NSString *)title{
+    if (self = [super initWithUrl:url title:title]) {
+        self.progressViewColor = HexColor(@"1C86EE");
+        [self setupNav];
+    }
+    return self;
 }
 
 - (void)setupNav{
@@ -55,11 +40,11 @@
 
 - (void)shareClick{
     
-    UMSocialUrlResource *urlResource = [[UMSocialUrlResource alloc] initWithSnsResourceType:UMSocialUrlResourceTypeImage url:self.url];
+    UMSocialUrlResource *urlResource = [[UMSocialUrlResource alloc] initWithSnsResourceType:UMSocialUrlResourceTypeImage url:self.url.absoluteString];
     
     NSString *title = self.title;
     NSString *shareText = self.title;
-    NSString *url = self.url;
+    NSString *url = self.url.absoluteString;
     
     // Wechat Session
     [UMSocialData defaultData].extConfig.wechatSessionData.urlResource = urlResource;
@@ -113,16 +98,4 @@
         NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
     }
 }
-
-#pragma mark - WebView Delegate
-
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
-    NSString *theTitle=[webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-    if (theTitle.length > 10) {
-        theTitle = [[theTitle substringToIndex:9] stringByAppendingString:@"…"];
-    }
-    self.title = theTitle;
-}
-
 @end

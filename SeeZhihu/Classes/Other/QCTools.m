@@ -23,14 +23,6 @@
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) lastObject];
 }
 
-+ (id)addressInfoForKey:(NSString *)key
-{
-    NSDictionary *addressInfo = [NSDictionary dictionaryWithContentsOfFile:
-                                 [[NSBundle mainBundle] pathForResource:@"RequestAddress"
-                                                                 ofType:@"plist"]];
-    return addressInfo[key];
-}
-
 + (UIColor *) colorWithHexString: (NSString *)color
 {
     return [QCTools colorWithHexString:color alpha:1.0f];

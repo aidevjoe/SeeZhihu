@@ -18,7 +18,7 @@
 
 
 ## App演示
-![image](http://ww4.sinaimg.cn/large/801b780agw1f7t72kqjtsg20aa0ithdu.gif)
+![image](http://ww1.sinaimg.cn/large/65e4f1e6gw1f7xuyk2ccgg20aa0ieb2b.gif)
 
 
 ## 更新
@@ -27,14 +27,14 @@
 
 > 1.1 对所有请求进行缓存处理  
 
-> 1.2 利用[RNCachingURLProtocol](https://github.com/rnapier/RNCachingURLProtocol)第三方库对UIWebView进行离线缓存
+> 1.2 利用[RNCachingURLProtocol](https://github.com/rnapier/RNCachingURLProtocol)对UIWebView进行离线缓存
 
 
 ## TODO
 
 >1. <del>网页离线缓存</del>      
->2. 对网页加载添加进度条  
->3. 清除缓存
+>2. <del>对网页加载添加进度条</del>  
+>3. <del>清除缓存</del>
 
 
 ## 最后

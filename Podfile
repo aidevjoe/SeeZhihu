@@ -10,5 +10,6 @@ pod 'QCAlertView'
 pod 'FDFullscreenPopGesture', '1.1'
 pod 'UMengSocialCOM', '~> 5.2.1'
 pod 'YYCache'
+pod 'NJKWebViewProgress'
 
 end

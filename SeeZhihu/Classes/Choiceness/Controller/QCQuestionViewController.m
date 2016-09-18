@@ -64,7 +64,7 @@
 - (void)getPostList{
     
     NSString *dateStr = [self.post.date stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    [QCNetworking getRequestWithUrl:[NSString stringWithFormat:@"%@%@/%@", getpostanswers, dateStr, self.post.name] params:nil cache:YES successBlock:^(id returnData, int code, NSString *msg) {
+    [QCNetworking getRequestWithUrl:[NSString stringWithFormat:@"%@%@/%@", getpostanswers, dateStr, self.post.name] params:nil cache:YES refresh:NO successBlock:^(id returnData, int code, NSString *msg) {
         for (NSDictionary *questionDict in returnData[@"answers"]) {
             QCQuestion *question = [QCQuestion yy_modelWithJSON:questionDict];
             ;
