@@ -567,12 +567,14 @@ static AFHTTPSessionManager *_manager;
 
 @implementation QCNetworkCache
 
-static NSString *const cacheDirKey = @"cacheDirKey";
+//static NSString *const cacheDirKey = @"cacheDirKey";
 static NSString *const downloadDirKey = @"downloadDirKey";
 static YYCache  *cache;
 
 + (void)initialize{
-    cache = [YYCache cacheWithName:cacheDirKey];
+    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject] stringByAppendingPathComponent:@"cacheDirKey"];
+    cache = [YYCache cacheWithPath:path];
+//    cache = [YYCache cacheWithName:cacheDirKey];
     cache.memoryCache.shouldRemoveAllObjectsOnMemoryWarning = YES;
     cache.memoryCache.shouldRemoveAllObjectsWhenEnteringBackground = YES;
 }

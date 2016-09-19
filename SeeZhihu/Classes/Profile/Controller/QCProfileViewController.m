@@ -138,11 +138,14 @@
 
     if (indexPath.section) {
         NSUInteger sdWebImageCacheSize = [SDWebImageManager sharedManager].imageCache.getSize;
-        NSUInteger nsUrlCacheSize = [[NSURLCache sharedURLCache] currentDiskUsage];
+//        NSUInteger nsUrlCacheSize = [[NSURLCache sharedURLCache] currentDiskUsage];
         NSUInteger qcNetworkCache = [QCNetworkCache totalDiskCacheSize];
         NSUInteger qcNetworkDownloadCache = [QCNetworkCache totalDownloadDataSize];
+        
+        NSLog(@"%li %li %li", sdWebImageCacheSize , qcNetworkCache, qcNetworkDownloadCache);
 
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f M", (sdWebImageCacheSize + nsUrlCacheSize + qcNetworkCache + qcNetworkDownloadCache) / (1024.0 * 1024.0)];
+
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f M", (sdWebImageCacheSize + qcNetworkCache + qcNetworkDownloadCache) / (1024.0 * 1024.0)];
     }
     
     return cell;

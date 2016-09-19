@@ -98,7 +98,7 @@ static NSSet *RNCachingSupportedSchemes;
 - (NSString *)cachePathForRequest:(NSURLRequest *)aRequest
 {
   // This stores in the Caches directory, which can be deleted when space is low, but we only use it for offline access
-  NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+  NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
   NSString *fileName = [[[aRequest URL] absoluteString] sha1];
 
   return [cachesPath stringByAppendingPathComponent:fileName];

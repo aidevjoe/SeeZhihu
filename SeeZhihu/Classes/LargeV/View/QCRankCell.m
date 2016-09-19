@@ -82,8 +82,6 @@
     [self.avatarImg autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     [self.avatarImg autoSetDimensionsToSize:CGSizeMake(60, 60)];
     [self.avatarImg autoPinEdgeToSuperviewEdge:ALEdgeLeft withInset:10];
-    [self.avatarImg autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:10];
-    [self.avatarImg autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:10];
     
     [self.nameLabel autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:self.avatarImg withOffset:10];
     [self.nameLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.avatarImg];

@@ -401,8 +401,8 @@
     if (!_progressView) {
         CGFloat progressBarHeight = 3.0f;
         CGRect navigaitonBarBounds = self.navigationController.navigationBar.bounds;
-//        CGRect barFrame = CGRectMake(0, navigaitonBarBounds.size.height - progressBarHeight-0.5, navigaitonBarBounds.size.width, progressBarHeight);
-        CGRect barFrame = CGRectMake(0, navigaitonBarBounds.size.height, navigaitonBarBounds.size.width, progressBarHeight);
+        CGRect barFrame = CGRectMake(0, navigaitonBarBounds.size.height - progressBarHeight-0.5, navigaitonBarBounds.size.width, progressBarHeight);
+//        CGRect barFrame = CGRectMake(0, navigaitonBarBounds.size.height, navigaitonBarBounds.size.width, progressBarHeight);
         _progressView = [[NJKWebViewProgressView alloc] initWithFrame:barFrame];
         _progressView.progressBarView.backgroundColor = self.progressViewColor;
         _progressView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
