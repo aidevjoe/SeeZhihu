@@ -151,8 +151,8 @@ static AFHTTPSessionManager *_manager;
                                 showHUD:(BOOL)showHUD{
     
     __block NSURLSessionTask *session = nil;
-    
-    if (networkStatus == QCNetworkStatusNotReachable || networkStatus == 0) {
+
+    if (networkStatus == QCNetworkStatusNotReachable) {
         
         [QCMessageAlertView showAlertWithMessage:QC_ERROR_IMFORMATION];
         failureBlock ? failureBlock(QC_ERROR) : 0;
@@ -517,6 +517,7 @@ static AFHTTPSessionManager *_manager;
 {
     // 1.获得网络监控的管理者
     AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
+    
     // 2.设置网络状态改变后的处理
     [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         // 当网络状态改变了, 就会调用这个block
@@ -539,6 +540,7 @@ static AFHTTPSessionManager *_manager;
                 break;
         }
     }];
+    
     [mgr startMonitoring];
 }
 

@@ -83,6 +83,11 @@
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
 }
 
+- (void)dealloc{
+    [self.progressView removeFromSuperview];
+    self.webView.delegate = nil;
+}
+
 -(void)viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:animated];
     [self.progressView removeFromSuperview];

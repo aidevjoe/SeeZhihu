@@ -14,6 +14,7 @@
 #import "UMSocialWechatHandler.h"
 #import "UMSocialSinaSSOHandler.h"
 #import "RNCachingURLProtocol.h"
+#import "QCNetworking.h"
 
 @interface AppDelegate ()
 
@@ -42,6 +43,8 @@
                                          RedirectURL:@"http://sns.whalecloud.com/sina2/callback"];
 
     [NSURLProtocol registerClass:[RNCachingURLProtocol class]];
+    
+    [QCNetworking checkNetworkStatus];
 
     return YES;
 }
