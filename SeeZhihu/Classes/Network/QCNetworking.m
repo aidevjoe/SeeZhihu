@@ -25,7 +25,7 @@
 #endif
 
 static NSTimeInterval       requestTimeout = 20.f;
-static QCNetworkStatus      networkStatus;
+static QCNetworkStatus      networkStatus = QCNetworkStatusUnknown;
 static AFHTTPSessionManager *_manager;
 
 @interface QCNetworking ()
@@ -55,6 +55,7 @@ static AFHTTPSessionManager *_manager;
     [QCNetworking checkNetworkStatus];
     
     _manager = manager;
+    
 }
 
 #pragma mark - 发送 GET 请求
@@ -151,28 +152,6 @@ static AFHTTPSessionManager *_manager;
                                 showHUD:(BOOL)showHUD{
     
     __block NSURLSessionTask *session = nil;
-
-    if (networkStatus == QCNetworkStatusNotReachable) {
-        
-        [QCMessageAlertView showAlertWithMessage:QC_ERROR_IMFORMATION];
-        failureBlock ? failureBlock(QC_ERROR) : 0;
-        
-        id responseObject = [QCNetworkCache getCacheResponseObjectWithRequestUrl:url params:params];
-        
-        if (responseObject) {
-            
-            int code = 0;
-            NSString *msg = nil;
-            if (responseObject) {
-                //这个字段取决于 服务器
-                code                = [responseObject[@"rsCode"] intValue];
-                msg                 = responseObject[@"rsMsg"];
-            }
-            successBlock ? successBlock(responseObject, code, msg) : 0;
-        }
-        
-        return session;
-    }
     
     if(showHUD) [QCLoadingView showLoadingView];
     
@@ -195,6 +174,26 @@ static AFHTTPSessionManager *_manager;
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [QCLoadingView hideLoadingView];
         failureBlock ? failureBlock(error) : 0;
+        
+        if (networkStatus == QCNetworkStatusNotReachable) {
+            
+//            [QCMessageAlertView showAlertWithMessage:QC_ERROR_IMFORMATION];
+            
+            id responseObject = [QCNetworkCache getCacheResponseObjectWithRequestUrl:url params:params];
+            
+            if (responseObject) {
+                
+                int code = 0;
+                NSString *msg = nil;
+                if (responseObject) {
+                    //这个字段取决于 服务器
+                    code                = [responseObject[@"rsCode"] intValue];
+                    msg                 = responseObject[@"rsMsg"];
+                }
+                successBlock ? successBlock(responseObject, code, msg) : 0;
+            }
+            
+        }
     }];
     
     [session resume];
@@ -513,11 +512,11 @@ static AFHTTPSessionManager *_manager;
 }
 
 #pragma makr - 检查网络
-+ (void)checkNetworkStatus
-{
++ (void)checkNetworkStatus{
+    
     // 1.获得网络监控的管理者
     AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
-    
+
     // 2.设置网络状态改变后的处理
     [mgr setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         // 当网络状态改变了, 就会调用这个block
