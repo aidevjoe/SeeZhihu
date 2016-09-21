@@ -24,7 +24,7 @@
 #define NSLog(FORMAT, ...) nil
 #endif
 
-static NSTimeInterval       requestTimeout = 20.f;
+static NSTimeInterval       requestTimeout = 10.f;
 static QCNetworkStatus      networkStatus = QCNetworkStatusUnknown;
 static AFHTTPSessionManager *_manager;
 
@@ -109,7 +109,7 @@ static AFHTTPSessionManager *_manager;
     
     if(showHUD) [QCLoadingView showLoadingView];
 
-    session = [_manager GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    session = [_manager GET:[url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [QCLoadingView hideLoadingView];
 
         int code = 0;
@@ -175,24 +175,20 @@ static AFHTTPSessionManager *_manager;
         [QCLoadingView hideLoadingView];
         failureBlock ? failureBlock(error) : 0;
         
-        if (networkStatus == QCNetworkStatusNotReachable) {
+        //            [QCMessageAlertView showAlertWithMessage:QC_ERROR_IMFORMATION];
+        
+        id responseObject = [QCNetworkCache getCacheResponseObjectWithRequestUrl:url params:params];
+        
+        if (responseObject) {
             
-//            [QCMessageAlertView showAlertWithMessage:QC_ERROR_IMFORMATION];
-            
-            id responseObject = [QCNetworkCache getCacheResponseObjectWithRequestUrl:url params:params];
-            
+            int code = 0;
+            NSString *msg = nil;
             if (responseObject) {
-                
-                int code = 0;
-                NSString *msg = nil;
-                if (responseObject) {
-                    //这个字段取决于 服务器
-                    code                = [responseObject[@"rsCode"] intValue];
-                    msg                 = responseObject[@"rsMsg"];
-                }
-                successBlock ? successBlock(responseObject, code, msg) : 0;
+                //这个字段取决于 服务器
+                code                = [responseObject[@"rsCode"] intValue];
+                msg                 = responseObject[@"rsMsg"];
             }
-            
+            successBlock ? successBlock(responseObject, code, msg) : 0;
         }
     }];
     

@@ -41,8 +41,7 @@
         _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        _tableView.estimatedRowHeight = 280.0f;//推测高度，必须有，可以随便写多少
-        _tableView.rowHeight = UITableViewAutomaticDimension;//iOS8之后默认就是这个值，可以省略
+        _tableView.rowHeight = 80;
         _tableView.showsHorizontalScrollIndicator = NO;
         _tableView.showsVerticalScrollIndicator = NO;
         [self.view addSubview:_tableView];

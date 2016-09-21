@@ -324,12 +324,12 @@
 		D8F4B5E71D89186C006D4A2E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D8F4B5EC1D89186C006D4A2E /* QCRankBaseViewController.h */,
+				D8F4B5ED1D89186C006D4A2E /* QCRankBaseViewController.m */,
 				D8F4B5E81D89186C006D4A2E /* QCFollowerViewController.h */,
 				D8F4B5E91D89186C006D4A2E /* QCFollowerViewController.m */,
 				D8F4B5EA1D89186C006D4A2E /* QCLargeVViewController.h */,
 				D8F4B5EB1D89186C006D4A2E /* QCLargeVViewController.m */,
-				D8F4B5EC1D89186C006D4A2E /* QCRankBaseViewController.h */,
-				D8F4B5ED1D89186C006D4A2E /* QCRankBaseViewController.m */,
 				D8F4B5EE1D89186C006D4A2E /* QCSearchViewController.h */,
 				D8F4B5EF1D89186C006D4A2E /* QCSearchViewController.m */,
 				D8F4B5F01D89186C006D4A2E /* QCUserInfoViewController.h */,
