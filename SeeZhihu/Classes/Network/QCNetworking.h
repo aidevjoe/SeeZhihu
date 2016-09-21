@@ -93,7 +93,7 @@ typedef void (^QCDownloadSuccessBlock)(NSURL *fileUrl);
 #pragma mark - 发送 GET 请求
 
 /**
- *   GET请求
+ *   GET请求 (直接加载缓存数据, 请求完成更新本地缓存数据)
  *
  *   @param url           url
  *   @param params        请求的参数字典
@@ -112,20 +112,16 @@ typedef void (^QCDownloadSuccessBlock)(NSURL *fileUrl);
                                 showHUD:(BOOL)showHUD;
 
 /**
- *   GET请求 (防止 表格视图分页时 数据重复加载)
+ *   GET请求 (自动缓存,没网络才加载缓存)
  *
  *   @param url           url
  *   @param params        请求的参数字典
- *   @param cache         是否缓存
- *   @param reload        是否重新加载数据 (防止tableview分页数据重复加载)
  *   @param successBlock  成功的回调
  *   @param failureBlock  失败的回调
  *   @param showHUD       是否加载进度指示器
  */
 + (NSURLSessionTask *)getRequestWithUrl:(NSString *)url
                                  params:(NSDictionary *)params
-                                  cache:(BOOL)isCache
-                                 reload:(BOOL)isReload
                            successBlock:(QCSuccessBlock)successBlock
                            failureBlock:(QCFailureBlock)failureBlock
                                 showHUD:(BOOL)showHUD;

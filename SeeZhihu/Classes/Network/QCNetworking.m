@@ -99,7 +99,6 @@ static AFHTTPSessionManager *_manager;
         
     }
     
-    
     //没有网络直接返回
     if (networkStatus == QCNetworkStatusNotReachable) {
         [QCMessageAlertView showAlertWithMessage:QC_ERROR_IMFORMATION];
@@ -137,27 +136,26 @@ static AFHTTPSessionManager *_manager;
 
 
 /**
- *   GET请求
+ *   GET请求(自动缓存)
  *
  *   @param url           url
  *   @param params        请求的参数字典
- *   @param cache         是否缓存
- *   @param reload        是否重新加载数据
  *   @param successBlock  成功的回调
  *   @param failureBlock  失败的回调
  *   @param showHUD       是否加载进度指示器
  */
 + (NSURLSessionTask *)getRequestWithUrl:(NSString *)url
                                  params:(NSDictionary *)params
-                                  cache:(BOOL)isCache
-                                 reload:(BOOL)isReload
                            successBlock:(QCSuccessBlock)successBlock
                            failureBlock:(QCFailureBlock)failureBlock
                                 showHUD:(BOOL)showHUD{
     
     __block NSURLSessionTask *session = nil;
     
-    if (isCache) {
+    if (networkStatus == QCNetworkStatusNotReachable || networkStatus == 0) {
+        
+        [QCMessageAlertView showAlertWithMessage:QC_ERROR_IMFORMATION];
+        failureBlock ? failureBlock(QC_ERROR) : 0;
         
         id responseObject = [QCNetworkCache getCacheResponseObjectWithRequestUrl:url params:params];
         
@@ -171,16 +169,8 @@ static AFHTTPSessionManager *_manager;
                 msg                 = responseObject[@"rsMsg"];
             }
             successBlock ? successBlock(responseObject, code, msg) : 0;
-        }else{
-            isReload = YES;
         }
-    }
-    
-    
-    //没有网络直接返回
-    if (networkStatus == QCNetworkStatusNotReachable) {
-        [QCMessageAlertView showAlertWithMessage:QC_ERROR_IMFORMATION];
-        //        failureBlock ? failureBlock(QC_ERROR) : 0;
+        
         return session;
     }
     
@@ -198,10 +188,9 @@ static AFHTTPSessionManager *_manager;
             msg                 = responseObject[@"rsMsg"];
         }
         
-        if (isReload) successBlock ? successBlock(responseObject, code, msg) : 0;
+        successBlock ? successBlock(responseObject, code, msg) : 0;
         
-        //缓存数据
-        isCache ? [QCNetworkCache cacheResponseObject:responseObject requestUrl:url params:params] : 0;
+        [QCNetworkCache cacheResponseObject:responseObject requestUrl:url params:params];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [QCLoadingView hideLoadingView];

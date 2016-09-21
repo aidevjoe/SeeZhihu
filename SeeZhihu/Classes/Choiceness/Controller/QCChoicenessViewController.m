@@ -73,7 +73,7 @@
 - (void)getPosts{
 
     NSString *url = self.postList.count ? [NSString stringWithFormat:@"%@/%li", getposts, [[self.postList lastObject] publishtime]] : getposts;
-    [QCNetworking getRequestWithUrl:url params:nil cache:YES reload:NO successBlock:^(id returnData, int code, NSString *msg) {
+    [QCNetworking getRequestWithUrl:url params:nil successBlock:^(id returnData, int code, NSString *msg) {
         self.tableView.tableFooterView.hidden = YES;
         self.navigationItem.titleView = nil;
         
